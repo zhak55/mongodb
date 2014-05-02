@@ -21,7 +21,7 @@
 
 // Check it out in Node.js:
 
- var mongo = require('mongoose');
+ var mongo = require('mongoose')
    , db;
  
   mongo.connect('mongodb://127.0.0.1/test');
