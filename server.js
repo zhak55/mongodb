@@ -19,7 +19,7 @@
 // > db.test.find()
 // and you get smth like this: { "_id" : ObjectId("5363dfeab276d23125abf620"), "name" : "Roman" }
 
-//Check it out in Node.js:
+// Check it out in Node.js:
 
  var mongo = require('mongoose');
    , db;
@@ -42,13 +42,13 @@
      }); 
    
    // compile our model
-   // the last parameter is name of collection
+   // the last parameter is the name of collection
    var MSG = mongo.model('Msg', messages, 'msg');  
    
-  //save messages
-  MSG.create({id: 1, msg: 'Hello, World!', author: 'Roman Zhak'}, function ( err, res ) {
+   //save messages
+   MSG.create({id: 1, msg: 'Hello, World!', author: 'Roman Zhak'}, function ( err, res ) {
 
-           if (err) return handleError(err);
+           if (err) return onError(err);
              console.log('Saved')
              console.log( res )
          }); 
@@ -59,4 +59,4 @@
 
      console.log( docs );
      
-  }) 
+  }); 
